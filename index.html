@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCast – The Concrete Truth</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <!-- ============================================================
+         HEADER — Podcast identity + episode title + hosts
+    ============================================================ -->
+    <header class="site-header">
+      <div class="container">
+        <span class="podcast-badge">EcoCast Podcast</span>
+        <h1 class="episode-title">The Concrete Truth: Building a Greener Future</h1>
+        <p class="episode-meta">Season 1 · Episode 4 · 28 min</p>
+        <p class="hosts-line">
+          Hosted by <strong>Mahshid</strong> &amp; <strong>Yara</strong>
+        </p>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ============================================================
+           PLAYER SECTION — Cover art + audio controls + download
+      ============================================================ -->
+      <section class="player-section">
+        <div class="container player-layout">
+
+          <!-- Cover art (CSS art — replace src with a real image if available) -->
+          <div class="cover-art" aria-hidden="true">
+            <div class="cover-icon">🏗️</div>
+            <p class="cover-subtitle">EcoCast</p>
+          </div>
+
+          <!-- Audio player card -->
+          <div class="player-card">
+            <p class="now-playing-label">Now Playing</p>
+            <p class="now-playing-title">The Concrete Truth</p>
+
+            <!-- Native audio element (hidden, controlled via JS) -->
+            <audio id="podcast-audio" preload="metadata">
+              <!-- Replace the src with your actual audio file path, e.g.: -->
+              <!-- <source src="/audio/episode4.mp3" type="audio/mpeg" /> -->
+              Your browser does not support the audio element.
+            </audio>
+
+            <!-- Custom player controls -->
+            <div class="player-controls">
+
+              <!-- Play / Pause button -->
+              <button id="play-btn" class="play-btn" type="button" aria-label="Play episode">
+                <!-- SVG play icon -->
+                <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <!-- SVG pause icon (hidden by default) -->
+                <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" class="hidden">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+              </button>
+
+              <!-- Progress bar + timestamps -->
+              <div class="progress-area">
+                <div class="progress-bar-track" id="progress-track" role="slider" aria-label="Seek audio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+                  <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="time-labels">
+                  <span id="current-time">0:00</span>
+                  <span id="total-duration">0:00</span>
+                </div>
+              </div>
+
+            </div><!-- /.player-controls -->
+
+            <!-- Download button -->
+            <a href="#" class="download-btn" download="EcoCast-Episode4.mp3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+              Download Episode
+            </a>
+
+          </div><!-- /.player-card -->
+        </div><!-- /.player-layout -->
+      </section><!-- /.player-section -->
+
+
+      <!-- ============================================================
+           EPISODE DESCRIPTION
+      ============================================================ -->
+      <section class="content-section" id="description">
+        <div class="container narrow">
+          <h2 class="section-heading">About This Episode</h2>
+          <p>
+            Concrete is the most widely used construction material on Earth — and one of the
+            most polluting. In this episode, Mahshid and Yara take a deep dive into the
+            environmental cost of concrete production, exploring how the cement industry
+            accounts for roughly <strong>8% of global CO₂ emissions</strong> each year.
+          </p>
+          <p>
+            But it's not all grim news. From cutting-edge recycling techniques to
+            carbon-capturing "green" concrete mixes, there are real and scalable solutions
+            emerging worldwide. Together, we unpack the science, the policy landscape, and
+            the innovators who are quietly remaking one of humanity's oldest industries.
+          </p>
+          <p>
+            Whether you're a student of engineering, an environmentally curious listener, or
+            simply someone who walks past construction sites and wonders about the grey
+            blocks going up — this episode is for you.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           WHY THIS TOPIC MATTERS (optional callout section)
+      ============================================================ -->
+      <section class="why-matters-section">
+        <div class="container narrow">
+          <div class="why-matters-card">
+            <span class="why-matters-icon">🌍</span>
+            <div>
+              <h3>Why This Topic Matters Globally</h3>
+              <p>
+                Cement production alone releases more CO₂ than the entire aviation industry.
+                As urbanisation accelerates — especially across Asia and Africa — concrete
+                demand is projected to grow by <strong>50% by 2050</strong>. Without urgent
+                innovation in how we make and reuse concrete, meeting the Paris Agreement
+                targets will be nearly impossible. Sustainable concrete is not a niche
+                topic; it is a civilisational necessity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           KEY TOPICS
+      ============================================================ -->
+      <section class="content-section" id="topics">
+        <div class="container narrow">
+          <h2 class="section-heading">Key Topics</h2>
+          <ul class="topic-list">
+            <li>
+              <span class="topic-dot"></span>
+              <div>
+                <strong>Environmental impact of concrete</strong>
+                <p>How Portland cement production drives large-scale carbon emissions and why the construction sector is under increasing regulatory pressure.</p>
+              </div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div>
+                <strong>Concrete recycling</strong>
+                <p>Techniques for crushing, sorting, and repurposing demolished concrete as recycled aggregate — reducing landfill waste and virgin material demand.</p>
+              </div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div>
+                <strong>Green concrete</strong>
+                <p>Alternative binders such as fly ash, ground granulated blast-furnace slag (GGBS), and geopolymers that cut cement content dramatically.</p>
+              </div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div>
+                <strong>Sustainable technologies</strong>
+                <p>Carbon capture and mineralisation during curing, 3D-printed concrete for less material waste, and bio-inspired self-healing concrete mixes.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           TRANSCRIPT
+      ============================================================ -->
+      <section class="content-section transcript-section" id="transcript">
+        <div class="container narrow">
+          <h2 class="section-heading">Transcript <span class="badge">Partial</span></h2>
+
+          <div class="transcript-body">
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                Welcome back to EcoCast. I'm Mahshid, and today I'm joined as always by
+                my wonderful co-host Yara. Today we're talking about something that literally
+                surrounds us every single day — concrete. And I think most people would be
+                shocked if they knew how much of a climate impact it has.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                Exactly. I mean, we walk past grey buildings and grey roads and we just
+                don't think about it. But the numbers are staggering. Cement — which is
+                the binding agent in concrete — is responsible for around eight percent
+                of all global CO₂ emissions. To put that in perspective, that's more
+                than the entire aviation sector.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                And the demand is only going up. Rapid urbanisation in countries like
+                India, China, and across sub-Saharan Africa means we're going to need
+                a lot more infrastructure in the coming decades. So the question really
+                is: can we keep building without destroying the planet?
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                That's the core tension of this episode. And the answer isn't a simple
+                yes or no. There are genuinely exciting developments in what's called
+                green concrete — where you replace a portion of the cement with industrial
+                by-products like fly ash from coal plants or slag from steel manufacturing.
+                These are materials that would otherwise go to waste, and they can cut the
+                carbon footprint of concrete by up to forty or even fifty percent.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                I love that. It's almost a circular economy story — turning one industry's
+                waste into another industry's resource. But I also want to talk about
+                concrete recycling, because I think that's often overlooked. What happens
+                to all the demolished concrete when a building comes down?
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                Traditionally, most of it ends up in landfill, or at best gets crushed
+                and used as low-grade fill material under roads. But there are newer
+                techniques — high-quality separation and processing — that allow recycled
+                concrete aggregate to be used in structural applications. It's not
+                mainstream yet, but the technology is there.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                And then there's the really futuristic stuff — carbon mineralisation,
+                where CO₂ is actually injected into fresh concrete as it cures and gets
+                permanently locked into the material. You're literally storing carbon
+                inside your buildings. I find that concept almost poetic.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                It really is. Companies like CarbonCure are already doing this at
+                commercial scale. And then there's geopolymer concrete, which eliminates
+                Portland cement entirely and replaces it with alkali-activated materials.
+                The structural performance is comparable, but the carbon emissions can
+                be reduced by up to eighty percent.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                So we have the solutions. The question is always adoption — policy,
+                industry standards, procurement rules. We'll dig into that more in the
+                second half of the episode. But first, let's take a short break.
+              </p>
+            </div>
+
+            <p class="transcript-note">
+              [Full transcript available as a downloadable PDF alongside this episode.]
+            </p>
+
+          </div><!-- /.transcript-body -->
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           SOURCES
+      ============================================================ -->
+      <section class="content-section" id="sources">
+        <div class="container narrow">
+          <h2 class="section-heading">Sources</h2>
+          <ol class="sources-list">
+            <li>
+              Andrew, R. M. (2019). Global CO₂ emissions from cement production, 1928–2018.
+              <em>Earth System Science Data, 11</em>(4), 1675–1710.
+              <a href="https://doi.org/10.5194/essd-11-1675-2019" target="_blank" rel="noopener">https://doi.org/10.5194/essd-11-1675-2019</a>
+            </li>
+            <li>
+              Ellen MacArthur Foundation. (2020). <em>Completing the picture: How the circular economy
+              tackles climate change.</em>
+              <a href="https://www.ellenmacarthurfoundation.org/completing-the-picture" target="_blank" rel="noopener">https://www.ellenmacarthurfoundation.org/completing-the-picture</a>
+            </li>
+            <li>
+              Habert, G., Miller, S. A., John, V. M., Provis, J. L., Favier, A., Horvath, A., &amp;
+              Scrivener, K. L. (2020). Environmental impacts and decarbonization strategies in the cement
+              and concrete industries. <em>Nature Reviews Earth &amp; Environment, 1</em>(11), 559–573.
+              <a href="https://doi.org/10.1038/s43017-020-0093-3" target="_blank" rel="noopener">https://doi.org/10.1038/s43017-020-0093-3</a>
+            </li>
+            <li>
+              International Energy Agency. (2023). <em>Cement: Tracking clean energy progress.</em>
+              <a href="https://www.iea.org/energy-system/industry/cement" target="_blank" rel="noopener">https://www.iea.org/energy-system/industry/cement</a>
+            </li>
+            <li>
+              Lothenbach, B., Scrivener, K., &amp; Hooton, R. D. (2011). Supplementary cementitious
+              materials. <em>Cement and Concrete Research, 41</em>(12), 1244–1256.
+              <a href="https://doi.org/10.1016/j.cemconres.2010.12.001" target="_blank" rel="noopener">https://doi.org/10.1016/j.cemconres.2010.12.001</a>
+            </li>
+            <li>
+              Tam, V. W. Y., Soomro, M., &amp; Evangelista, A. C. J. (2018). A review of recycled
+              aggregate in concrete applications. <em>Construction and Building Materials, 172</em>,
+              272–292.
+              <a href="https://doi.org/10.1016/j.conbuildmat.2018.03.240" target="_blank" rel="noopener">https://doi.org/10.1016/j.conbuildmat.2018.03.240</a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           ABOUT US
+      ============================================================ -->
+      <section class="content-section about-section" id="about">
+        <div class="container narrow">
+          <h2 class="section-heading">About the Hosts</h2>
+          <div class="hosts-grid">
+
+            <div class="host-card">
+              <div class="host-avatar host-avatar-m">M</div>
+              <div class="host-info">
+                <h3 class="host-name">Mahshid</h3>
+                <span class="host-role">Host</span>
+                <p>
+                  Mahshid is a sustainability researcher with a background in civil
+                  engineering and environmental policy. Her work focuses on decarbonisation
+                  pathways for the built environment. On EcoCast, she brings rigour and
+                  depth to the science behind green building materials, and is passionate
+                  about making technical topics accessible to everyone.
+                </p>
+              </div>
+            </div>
+
+            <div class="host-card">
+              <div class="host-avatar host-avatar-y">Y</div>
+              <div class="host-info">
+                <h3 class="host-name">Yara</h3>
+                <span class="host-role">Co-Host</span>
+                <p>
+                  Yara is an environmental journalist and educator who covers the
+                  intersection of industry, climate, and innovation. She has reported on
+                  construction and materials science from projects across Europe and the
+                  Middle East. On EcoCast, Yara ensures every complex idea is grounded in
+                  real-world consequence and human impact.
+                </p>
+              </div>
+            </div>
+
+          </div><!-- /.hosts-grid -->
+        </div>
+      </section>
+
+    </main><!-- /main -->
+
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-title">EcoCast Podcast</p>
+        <p class="footer-sub">Exploring sustainability, one episode at a time.</p>
+        <p class="footer-copy">&copy; 2026 Mahshid &amp; Yara · All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Minimal JS for the custom audio player -->
+    <script type="module" src="/src/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,614 @@
+/* ================================================================
+   EcoCast Podcast — Stylesheet
+   Color palette:
+     --green-dark   : #2d6a4f  (accent, buttons, badges)
+     --green-mid    : #40916c  (hover states)
+     --green-light  : #d8f3dc  (tinted backgrounds)
+     --text-main    : #1a1a1a
+     --text-muted   : #555
+     --border       : #e0e0e0
+     --bg-page      : #ffffff
+     --bg-section   : #f8faf8
+================================================================ */
+
+/* ── Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ── Utility ───────────────────────────────────────────────── */
+/* Hides the pause icon by default; toggled by JS */
+.hidden {
+  display: none !important;
+}
+
+/* ── Layout container ──────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Narrower container used for text-heavy sections */
+.narrow {
+  max-width: 760px;
+}
+
+/* ── Typography helpers ────────────────────────────────────── */
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Small inline badge (e.g. "Partial" on transcript) */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #d8f3dc;
+  color: #2d6a4f;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* ================================================================
+   HEADER
+================================================================ */
+.site-header {
+  background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%);
+  color: #ffffff;
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+}
+
+.podcast-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.1rem;
+}
+
+.episode-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 700px;
+  margin: 0 auto 0.75rem;
+}
+
+.episode-meta {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.hosts-line {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.hosts-line strong {
+  color: #b7e4c7;
+}
+
+/* ================================================================
+   PLAYER SECTION
+================================================================ */
+.player-section {
+  background: #f8faf8;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 2.5rem 0;
+}
+
+.player-layout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Cover art tile */
+.cover-art {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 60%, #74c69d 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.25);
+}
+
+.cover-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.cover-subtitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Player card */
+.player-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.now-playing-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2d6a4f;
+  margin-bottom: 0.25rem;
+}
+
+.now-playing-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Player controls row ─── */
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Play / pause button */
+.play-btn {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #2d6a4f;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.play-btn:hover {
+  background: #40916c;
+}
+
+.play-btn:active {
+  transform: scale(0.94);
+}
+
+/* Progress area (bar + timestamps) */
+.progress-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background: #d0e8d8;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0.35rem;
+  outline: none;
+}
+
+.progress-bar-track:focus-visible {
+  outline: 2px solid #2d6a4f;
+  outline-offset: 3px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #2d6a4f;
+  border-radius: 999px;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+/* Download button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d6a4f;
+  border: 1.5px solid #2d6a4f;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.download-btn:hover {
+  background: #2d6a4f;
+  color: #ffffff;
+}
+
+/* ================================================================
+   GENERIC CONTENT SECTIONS
+================================================================ */
+.content-section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.content-section p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================================================
+   WHY THIS MATTERS callout
+================================================================ */
+.why-matters-section {
+  background: #f0fdf4;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #c3e6cb;
+}
+
+.why-matters-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.why-matters-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.why-matters-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1b4332;
+  margin-bottom: 0.5rem;
+}
+
+.why-matters-card p {
+  color: #2d4a38;
+  margin: 0;
+}
+
+/* ================================================================
+   KEY TOPICS list
+================================================================ */
+.topic-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.topic-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.topic-dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2d6a4f;
+  margin-top: 0.45rem;
+}
+
+.topic-list strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.topic-list p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ================================================================
+   TRANSCRIPT
+================================================================ */
+.transcript-section {
+  background: #f8faf8;
+}
+
+.transcript-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.transcript-entry {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.speaker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 0.15rem;
+}
+
+.speaker-mahshid {
+  background: #d8f3dc;
+  color: #1b4332;
+}
+
+.speaker-yara {
+  background: #e0f2fe;
+  color: #0c4a6e;
+}
+
+.transcript-entry p {
+  margin: 0;
+  color: #333;
+}
+
+.transcript-note {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ================================================================
+   SOURCES
+================================================================ */
+.sources-list {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.sources-list li {
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.sources-list a {
+  color: #2d6a4f;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.sources-list a:hover {
+  color: #40916c;
+}
+
+/* ================================================================
+   ABOUT US
+================================================================ */
+.about-section {
+  background: #f8faf8;
+}
+
+.hosts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+.host-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.host-avatar {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.host-avatar-m {
+  background: linear-gradient(135deg, #2d6a4f, #40916c);
+}
+
+.host-avatar-y {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+}
+
+.host-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.host-role {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2d6a4f;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.host-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+.site-footer {
+  background: #1b4332;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.footer-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #b7e4c7;
+  margin-bottom: 0.25rem;
+}
+
+.footer-sub {
+  font-size: 0.88rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  opacity: 0.55;
+}
+
+/* ================================================================
+   RESPONSIVE — tablet & mobile
+================================================================ */
+
+/* Tablet: ≤ 768px */
+@media (max-width: 768px) {
+  .player-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cover-art {
+    width: 130px;
+    height: 130px;
+  }
+
+  .now-playing-title {
+    white-space: normal;
+  }
+
+  .player-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .progress-area {
+    width: 100%;
+    order: 3;
+  }
+
+  .hosts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transcript-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .speaker {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Mobile: ≤ 480px */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .episode-title {
+    font-size: 1.5rem;
+  }
+
+  .cover-art {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cover-icon {
+    font-size: 2.2rem;
+  }
+
+  .host-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-heading {
+    font-size: 1.25rem;
+  }
+}
