@@ -572,6 +572,23 @@ body {
 
 /* Tablet: ≤ 768px */
 @media (max-width: 768px) {
+  /* Header */
+  .header-title-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-photo-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  .episode-title {
+    text-align: center;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  /* Player */
   .player-layout {
     flex-direction: column;
     text-align: center;
@@ -596,10 +613,16 @@ body {
     order: 3;
   }
 
+  .download-btn {
+    align-self: center;
+  }
+
+  /* Hosts */
   .hosts-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Transcript */
   .transcript-entry {
     grid-template-columns: 1fr;
   }
@@ -612,14 +635,25 @@ body {
 
 /* Mobile: ≤ 480px */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Header */
   .site-header {
-    padding: 2.5rem 0 2rem;
+    padding: 2rem 0 1.75rem;
+  }
+
+  .header-photo-frame {
+    width: 150px;
+    height: 150px;
   }
 
   .episode-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
+  /* Player */
   .cover-art {
     width: 110px;
     height: 110px;
@@ -629,12 +663,49 @@ body {
     font-size: 2.2rem;
   }
 
+  /* Why matters */
+  .why-matters-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hosts */
   .host-card {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* General */
   .section-heading {
     font-size: 1.25rem;
+  }
+
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .why-matters-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Small phones: ≤ 360px */
+@media (max-width: 360px) {
+  .header-photo-frame {
+    width: 120px;
+    height: 120px;
+  }
+
+  .episode-title {
+    font-size: 1.2rem;
+  }
+
+  .play-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .player-card {
+    width: 100%;
   }
 }
