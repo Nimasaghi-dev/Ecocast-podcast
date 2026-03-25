@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-
     <!-- ============================================================
          HEADER — Podcast identity + episode title + hosts
     ============================================================ -->
@@ -16,25 +15,26 @@
         <span class="podcast-badge">EcoCast Podcast</span>
         <div class="header-title-group">
           <div class="header-photo-frame">
-            <img src="/src/assets/hero.png" alt="EcoCast" />
+            <img src="./public/image/Green_Concrete.jpg.jpeg" alt="EcoCast" />
           </div>
-          <h1 class="episode-title">The Concrete Truth: Building a Greener Future</h1>
+          <h1 class="episode-title">
+            Building a Circular Future: Concrete Recycling & Green Concrete
+          </h1>
         </div>
         <p class="episode-meta">Season 1 · Episode 4 · 28 min</p>
         <p class="hosts-line">
           Hosted by <strong>Mahshid</strong> &amp; <strong>Yara</strong>
         </p>
+        
       </div>
     </header>
 
     <main>
-
       <!-- ============================================================
            PLAYER SECTION — Cover art + audio controls + download
       ============================================================ -->
       <section class="player-section">
         <div class="container player-layout">
-
           <!-- Cover art (CSS art — replace src with a real image if available) -->
           <div class="cover-art" aria-hidden="true">
             <div class="cover-icon">🏗️</div>
@@ -55,22 +55,50 @@
 
             <!-- Custom player controls -->
             <div class="player-controls">
-
               <!-- Play / Pause button -->
-              <button id="play-btn" class="play-btn" type="button" aria-label="Play episode">
+              <button
+                id="play-btn"
+                class="play-btn"
+                type="button"
+                aria-label="Play episode"
+              >
                 <!-- SVG play icon -->
-                <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-                  <path d="M8 5v14l11-7z"/>
+                <svg
+                  id="icon-play"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="28"
+                  height="28"
+                >
+                  <path d="M8 5v14l11-7z" />
                 </svg>
                 <!-- SVG pause icon (hidden by default) -->
-                <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" class="hidden">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                <svg
+                  id="icon-pause"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="28"
+                  height="28"
+                  class="hidden"
+                >
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                 </svg>
               </button>
 
               <!-- Progress bar + timestamps -->
               <div class="progress-area">
-                <div class="progress-bar-track" id="progress-track" role="slider" aria-label="Seek audio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+                <div
+                  class="progress-bar-track"
+                  id="progress-track"
+                  role="slider"
+                  aria-label="Seek audio"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                  tabindex="0"
+                >
                   <div class="progress-bar-fill" id="progress-fill"></div>
                 </div>
                 <div class="time-labels">
@@ -78,21 +106,28 @@
                   <span id="total-duration">0:00</span>
                 </div>
               </div>
-
-            </div><!-- /.player-controls -->
+            </div>
+            <!-- /.player-controls -->
 
             <!-- Download button -->
             <a href="#" class="download-btn" download="EcoCast-Episode4.mp3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
               </svg>
               Download Episode
             </a>
-
-          </div><!-- /.player-card -->
-        </div><!-- /.player-layout -->
-      </section><!-- /.player-section -->
-
+          </div>
+          <!-- /.player-card -->
+        </div>
+        <!-- /.player-layout -->
+      </section>
+      <!-- /.player-section -->
 
       <!-- ============================================================
            EPISODE DESCRIPTION
@@ -101,25 +136,23 @@
         <div class="container narrow">
           <h2 class="section-heading">About This Episode</h2>
           <p>
-            Concrete is the most widely used construction material on Earth — and one of the
-            most polluting. In this episode, Mahshid and Yara take a deep dive into the
-            environmental cost of concrete production, exploring how the cement industry
-            accounts for roughly <strong>8% of global CO₂ emissions</strong> each year.
+            We analyse the environmental impact of concrete production and
+            explain why it has become a major global sustainability challenge.
+            Concrete is one of the most widely used materials in construction,
+            yet its production is responsible for significant carbon emissions
+            and resource consumption. We examine how concrete recycling and
+            green concrete technologies can contribute to a more sustainable
+            construction industry. In addition, we explore international
+            approaches and recent scientific developments that aim to reduce
+            waste, improve material performance, and
+            <strong>lower CO₂ emissions</strong>.
           </p>
-          <p>
-            But it's not all grim news. From cutting-edge recycling techniques to
-            carbon-capturing "green" concrete mixes, there are real and scalable solutions
-            emerging worldwide. Together, we unpack the science, the policy landscape, and
-            the innovators who are quietly remaking one of humanity's oldest industries.
-          </p>
-          <p>
-            Whether you're a student of engineering, an environmentally curious listener, or
-            simply someone who walks past construction sites and wonders about the grey
-            blocks going up — this episode is for you.
-          </p>
+          <div class="section-images">
+            <img src="/image/laying-concrete-header.webp" alt="Laying concrete" />
+            <img src="/image/sand.png" alt="Sand resources" />
+          </div>
         </div>
       </section>
-
 
       <!-- ============================================================
            WHY THIS TOPIC MATTERS (optional callout section)
@@ -130,19 +163,26 @@
             <span class="why-matters-icon">🌍</span>
             <div>
               <h3>Why This Topic Matters Globally</h3>
-              <p>
-                Cement production alone releases more CO₂ than the entire aviation industry.
-                As urbanisation accelerates — especially across Asia and Africa — concrete
-                demand is projected to grow by <strong>50% by 2050</strong>. Without urgent
-                innovation in how we make and reuse concrete, meeting the Paris Agreement
-                targets will be nearly impossible. Sustainable concrete is not a niche
-                topic; it is a civilisational necessity.
+              <>
+                Concrete is one of the most widely used materials in the world,
+                but it also has a significant environmental impact. Cement
+                production alone is responsible for approximately <strong>7–8% of global
+                CO₂ emissions</strong> . At the same time, increasing urbanisation and
+                population growth continue to drive demand for new
+                infrastructure, which intensifies resource depletion and
+                environmental pressure. For this reason, developing sustainable
+                alternatives such as recycled concrete and green technologies is
+                essential for achieving a circular economy in the construction
+                sector.
               </p>
             </div>
           </div>
+          <div class="section-images">
+            <img src="./public/image/1746885008927.jpeg" alt="Concrete construction" />
+            <img src="/image/wind.png" alt="Wind energy" />
+          </div>
         </div>
       </section>
-
 
       <!-- ============================================================
            KEY TOPICS
@@ -153,148 +193,356 @@
           <ul class="topic-list">
             <li>
               <span class="topic-dot"></span>
-              <div>
-                <strong>Environmental impact of concrete</strong>
-                <p>How Portland cement production drives large-scale carbon emissions and why the construction sector is under increasing regulatory pressure.</p>
-              </div>
+              <div><strong>Environmental impact of concrete production</strong></div>
             </li>
             <li>
               <span class="topic-dot"></span>
-              <div>
-                <strong>Concrete recycling</strong>
-                <p>Techniques for crushing, sorting, and repurposing demolished concrete as recycled aggregate — reducing landfill waste and virgin material demand.</p>
-              </div>
+              <div><strong>CO₂ emissions from cement</strong></div>
             </li>
             <li>
               <span class="topic-dot"></span>
-              <div>
-                <strong>Green concrete</strong>
-                <p>Alternative binders such as fly ash, ground granulated blast-furnace slag (GGBS), and geopolymers that cut cement content dramatically.</p>
-              </div>
+              <div><strong>Concrete recycling and circular economy</strong></div>
             </li>
             <li>
               <span class="topic-dot"></span>
-              <div>
-                <strong>Sustainable technologies</strong>
-                <p>Carbon capture and mineralisation during curing, 3D-printed concrete for less material waste, and bio-inspired self-healing concrete mixes.</p>
-              </div>
+              <div><strong>International approaches (Netherlands, Japan, Denmark)</strong></div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div><strong>Technical challenges (porosity and strength)</strong></div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div><strong>Innovative solutions (slag, carbon capture)</strong></div>
+            </li>
+            <li>
+              <span class="topic-dot"></span>
+              <div><strong>Green concrete and sustainable technologies</strong></div>
             </li>
           </ul>
+          <div class="section-images">
+            <img src="/image/concrete (1).webp" alt="Concrete" />
+            <img src="/image/green.webp" alt="Green concrete technology" />
+          </div>
         </div>
       </section>
-
 
       <!-- ============================================================
            TRANSCRIPT
       ============================================================ -->
       <section class="content-section transcript-section" id="transcript">
         <div class="container narrow">
-          <h2 class="section-heading">Transcript <span class="badge">Partial</span></h2>
+          <h2 class="section-heading">Transcript</h2>
 
           <div class="transcript-body">
-
+            <!-- 0:00 – 1:15 Introduction -->
             <div class="transcript-entry">
               <span class="speaker speaker-mahshid">Mahshid</span>
               <p>
-                Welcome back to EcoCast. I'm Mahshid, and today I'm joined as always by
-                my wonderful co-host Yara. Today we're talking about something that literally
-                surrounds us every single day — concrete. And I think most people would be
-                shocked if they knew how much of a climate impact it has.
+                Hello everyone and welcome to our podcast. We are Group 5.
+                Today, we will take a look at the construction industry's
+                environmental footprint. Concrete is arguably the most essential
+                material in modern infrastructure; nevertheless, we must examine
+                the massive ecological cost of its production. Personally, I
+                found it quite eye-opening how much we rely on a material that
+                has such a hidden impact on our climate goals.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-yara">Yara</span>
               <p>
-                Exactly. I mean, we walk past grey buildings and grey roads and we just
-                don't think about it. But the numbers are staggering. Cement — which is
-                the binding agent in concrete — is responsible for around eight percent
-                of all global CO₂ emissions. To put that in perspective, that's more
-                than the entire aviation sector.
+                Exactly, Mahshid. It is a complex international challenge. Our
+                objective today is to investigate why traditional concrete is
+                such a hurdle for sustainability and how recycling technology is
+                evolving. We will talk you through four key areas: the carbon
+                impact of cement, the limitations of recycling, international
+                case studies from the Netherlands and Japan, and the future of
+                carbon-capturing concrete.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-mahshid">Mahshid</span>
               <p>
-                And the demand is only going up. Rapid urbanisation in countries like
-                India, China, and across sub-Saharan Africa means we're going to need
-                a lot more infrastructure in the coming decades. So the question really
-                is: can we keep building without destroying the planet?
+                Right. It is important to realize that this is not just a local
+                construction issue, but a global environmental crisis. Yara is
+                going to elaborate on the scientific research we have analysed
+                to show us exactly where the global industry is heading, and I
+                will try to translate these complex scientific findings into
+                what they mean for the future of our cities.
+              </p>
+            </div>
+
+            <!-- 1:15 – 3:00 CO2 Challenge and Resource Depletion -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                That is a staggering comparison. This impact is not just about
+                carbon emissions; I've also read that the raw materials we often
+                take for granted, like sand, are becoming scarce. It seems we
+                are facing a dual crisis: we are running out of the very
+                ingredients needed to make concrete while simultaneously
+                polluting the atmosphere to process them.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-yara">Yara</span>
               <p>
-                That's the core tension of this episode. And the answer isn't a simple
-                yes or no. There are genuinely exciting developments in what's called
-                green concrete — where you replace a portion of the cement with industrial
-                by-products like fly ash from coal plants or slag from steel manufacturing.
-                These are materials that would otherwise go to waste, and they can cut the
-                carbon footprint of concrete by up to forty or even fifty percent.
+                What many people do not realize is that the heart of this
+                problem lies in the chemistry itself. The process of
+                'calcination' is the main culprit here. To produce cement, we
+                must heat limestone, which is Calcium Carbonate, to over 1400
+                degrees Celsius. During this reaction, the molecule literally
+                splits; the lime we need remains, but pure CO₂ is released
+                directly into the atmosphere as a byproduct. These are known as
+                'process emissions,' and they cannot be avoided simply by
+                switching to green energy. Furthermore, concrete production
+                consumes enormous quantities of natural resources like fresh
+                water and specific types of river sand, which we are pulling
+                from ecosystems faster than they can replenish.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-mahshid">Mahshid</span>
               <p>
-                I love that. It's almost a circular economy story — turning one industry's
-                waste into another industry's resource. But I also want to talk about
-                concrete recycling, because I think that's often overlooked. What happens
-                to all the demolished concrete when a building comes down?
+                So we are depleting natural resources while simultaneously
+                'cooking' the planet. Consequently, the demand for urban
+                expansion is directly clashing with our global climate goals.
+              </p>
+            </div>
+
+            <!-- 3:00 – 4:30 International Case Studies -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                This global pressure is why we see such diverse international
+                strategies. It is not just a technical issue, but one tied to
+                local culture, space availability, and economic priorities. For
+                instance, the difference between how a flat country like the
+                Netherlands and a mountainous, seismic area like Japan
+                approaches this is quite fascinating.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-yara">Yara</span>
               <p>
-                Traditionally, most of it ends up in landfill, or at best gets crushed
-                and used as low-grade fill material under roads. But there are newer
-                techniques — high-quality separation and processing — that allow recycled
-                concrete aggregate to be used in structural applications. It's not
-                mainstream yet, but the technology is there.
+                In the Netherlands, the focus is mainly on circular reuse of
+                aggregates — specifically reusing aggregates for road
+                infrastructure. However, in Japan, the situation is quite
+                different. Due to limited space and strict seismic safety
+                requirements, they have developed advanced mechanical methods to
+                separate old cement paste from the stone almost entirely. This
+                ensures that recycled aggregates remain strong enough for
+                earthquake-resistant structures.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-mahshid">Mahshid</span>
               <p>
-                And then there's the really futuristic stuff — carbon mineralisation,
-                where CO₂ is actually injected into fresh concrete as it cures and gets
-                permanently locked into the material. You're literally storing carbon
-                inside your buildings. I find that concept almost poetic.
+                So while the Netherlands prioritises material reuse, Japan
+                focuses more on structural performance. This shows how local
+                conditions shape sustainable construction strategies.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-yara">Yara</span>
               <p>
-                It really is. Companies like CarbonCure are already doing this at
-                commercial scale. And then there's geopolymer concrete, which eliminates
-                Portland cement entirely and replaces it with alkali-activated materials.
-                The structural performance is comparable, but the carbon emissions can
-                be reduced by up to eighty percent.
+                Exactly. We also see this international shift in projects such
+                as the Soundport building in Copenhagen. In this case, the
+                design itself was based on circular principles, meaning
+                materials were selected with future reuse in mind. As Wu et al.
+                (2025) explain, this reflects a broader global transition toward
+                designing buildings for disassembly rather than demolition.
               </p>
             </div>
 
             <div class="transcript-entry">
               <span class="speaker speaker-mahshid">Mahshid</span>
               <p>
-                So we have the solutions. The question is always adoption — policy,
-                industry standards, procurement rules. We'll dig into that more in the
-                second half of the episode. But first, let's take a short break.
+                That makes sense. So instead of treating buildings as permanent
+                structures, they are increasingly seen as material banks for
+                future construction. But this raises an important question: if
+                we reuse materials, why is crushing concrete not always the
+                perfect solution?
               </p>
             </div>
 
-            <p class="transcript-note">
-              [Full transcript available as a downloadable PDF alongside this episode.]
-            </p>
+            <!-- 4:30 – 6:00 Technical Hurdle: Porosity and Strength -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <div>
+                <p>
+                  When we produce 'recycled aggregates' by crushing demolished
+                  structures, we face a major engineering hurdle. Shomal Zadeh
+                  (2023) identified that construction waste can account for up to
+                  80% of total waste in some regions. While there is no shortage
+                  of material, the problem is that these crushed pieces are not
+                  'clean'; they still have old cement paste stuck to them.
+                </p>
+                <p>
+                  This leftover paste makes the material 'porous.' You can think
+                  of it like a sponge; it is filled with microscopic holes that
+                  absorb water. When you use these porous stones in new concrete,
+                  it weakens the entire structure. The compressive strength drops
+                  and the concrete becomes less durable because it is more
+                  susceptible to freeze-thaw damage. This is why engineers are
+                  often still hesitant to use recycled concrete for load-bearing
+                  walls, limiting its use to foundations or cycling paths.
+                </p>
+              </div>
+            </div>
 
-          </div><!-- /.transcript-body -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                So, to clarify for our listeners: you are referring to the old
+                cement paste that stays attached to the rocks after crushing,
+                correct? I can imagine that this 'leftover' material
+                significantly changes how the new concrete behaves. How exactly
+                does that affect the overall quality and safety of a new
+                structure?
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                Exactly. Because of this porous structure, the material absorbs
+                more water, which directly reduces both strength and durability.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                I see. It is almost like building with a foundation that is
+                constantly thirsty. Nevertheless, this technical barrier is
+                exactly where the latest innovations in Green Concrete are
+                starting to change the game.
+              </p>
+            </div>
+
+            <!-- 6:00 – 7:00 Innovation: Slag and Carbon Capture -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <div>
+                <p>
+                  To stress an important point: sustainability must go
+                  hand-in-hand with performance. We are now using industrial
+                  byproducts like blast furnace slag to 'heal' those porous
+                  structures from the inside. Bai and colleagues demonstrated in
+                  2026 that moderate amounts of slag promote the formation of
+                  C-S-H gel. That stands for Calcium-Silicate-Hydrate, and it is
+                  the 'glue' that gives concrete its strength. This gel fills
+                  those sponge-like holes and restores the material's strength
+                  chemically.
+                </p>
+                <p>
+                  Additionally, there is the carbonation research by Shao and
+                  Sakai from 2025. They found that recycled concrete powder can
+                  actually absorb CO₂ from the air. During carbonation, the CO₂
+                  reacts with the material to form calcium carbonate crystals,
+                  making the concrete denser and stronger. We are essentially
+                  turning a building into a carbon sink that improves because of
+                  the emissions it captures.
+                </p>
+              </div>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                Using industrial waste to fix construction waste sounds like a
+                win-win for the circular economy. It is essentially a chemical
+                upgrade that turns a weakness into a strength. Furthermore, does
+                this mean we could eventually see buildings that clean the air
+                while they stand?
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                Indeed. Because of this, the building itself becomes a carbon
+                sink.
+              </p>
+            </div>
+
+            <!-- 7:45 – 8:30 Future Innovations & Methodology -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                It is impressive to see how deep the chemistry goes and how we
+                can turn one of the world's biggest polluters into a tool for
+                carbon storage. However, I wonder about the transition from the
+                lab to the real world: how do researchers ensure that these new
+                green materials are actually safe and reliable for massive
+                projects? We certainly cannot take risks when it comes to the
+                structural integrity of our built environment.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                That is a vital point. To ensure safety, the scientific
+                community follows a very strict path. Namely, John and Zordan
+                explained in their 2001 research that developing recycled
+                building materials requires a systematic process. This starts
+                with analysing the chemical properties of the waste, followed by
+                testing the physical strength of the new material, and finally
+                evaluating the environmental impact. Therefore, we can trust
+                that these innovations have been rigorously tested for safety.
+              </p>
+            </div>
+
+            <!-- 8:30 – 9:00 Conclusion -->
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                To recap our discussion: we have analysed the staggering 7 to 8%
+                CO₂ impact of cement production and the international strategies
+                used to combat this, from the roads in the Netherlands to the
+                high-tech skyscrapers in Japan. We also investigated the
+                technical hurdle of porosity that currently limits the strength
+                of recycled aggregates and how new research is overcoming these
+                barriers.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-yara">Yara</span>
+              <p>
+                Indeed. To summarize the key points, our research into Bai et
+                al. (2026) and Shao &amp; Sakai (2025) highlights that through
+                slag additives and carbonation processes, we can actually
+                transform concrete into a high-performance carbon sink. The main
+                takeaway for our audience is that sustainable concrete is no
+                longer a niche interest, but a fundamental necessity for a
+                global circular economy.
+              </p>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker speaker-mahshid">Mahshid</span>
+              <p>
+                In conclusion, by applying the systematic research methods
+                described by John and Zordan, we can effectively reduce the
+                footprint of the world we build. It requires international
+                collaboration, but the technology is clearly there. That
+                completes our summary. Thank you for listening!
+              </p>
+            </div>
+          </div>
+          <!-- /.transcript-body -->
         </div>
       </section>
-
 
       <!-- ============================================================
            SOURCES
@@ -304,85 +552,81 @@
           <h2 class="section-heading">Sources</h2>
           <ol class="sources-list">
             <li>
-              Andrew, R. M. (2019). Global CO₂ emissions from cement production, 1928–2018.
-              <em>Earth System Science Data, 11</em>(4), 1675–1710.
-              <a href="https://doi.org/10.5194/essd-11-1675-2019" target="_blank" rel="noopener">https://doi.org/10.5194/essd-11-1675-2019</a>
+              Bai, W., Zhang, A., Yuan, C., Guan, J., Xie, C., Lv, Y., &amp; Li, L. (2026).
+              Multi-scale analysis of microstructure and strength formation mechanism of recycled
+              concrete: Considering the effects of slag admixture and aggregate type.
+              <em>Archives of Civil and Mechanical Engineering, 26</em>, 60.
+              <a href="https://doi.org/10.1007/s43452-026-01432-6" target="_blank" rel="noopener">https://doi.org/10.1007/s43452-026-01432-6</a>
             </li>
             <li>
-              Ellen MacArthur Foundation. (2020). <em>Completing the picture: How the circular economy
-              tackles climate change.</em>
-              <a href="https://www.ellenmacarthurfoundation.org/completing-the-picture" target="_blank" rel="noopener">https://www.ellenmacarthurfoundation.org/completing-the-picture</a>
+              John, V. M., &amp; Zordan, S. E. (2001). Research and development methodology for
+              recycling residues as building materials: A proposal.
+              <em>Waste Management, 21</em>(3), 213–219.
+              <a href="https://doi.org/10.1016/S0956-053X(00)00092-1" target="_blank" rel="noopener">https://doi.org/10.1016/S0956-053X(00)00092-1</a>
             </li>
             <li>
-              Habert, G., Miller, S. A., John, V. M., Provis, J. L., Favier, A., Horvath, A., &amp;
-              Scrivener, K. L. (2020). Environmental impacts and decarbonization strategies in the cement
-              and concrete industries. <em>Nature Reviews Earth &amp; Environment, 1</em>(11), 559–573.
-              <a href="https://doi.org/10.1038/s43017-020-0093-3" target="_blank" rel="noopener">https://doi.org/10.1038/s43017-020-0093-3</a>
+              Nilimaa, J. (2023). Smart materials and technologies for sustainable concrete
+              construction. <em>Developments in the Built Environment, 15</em>, 100177.
+              <a href="https://doi.org/10.1016/j.dibe.2023.100177" target="_blank" rel="noopener">https://doi.org/10.1016/j.dibe.2023.100177</a>
             </li>
             <li>
-              International Energy Agency. (2023). <em>Cement: Tracking clean energy progress.</em>
-              <a href="https://www.iea.org/energy-system/industry/cement" target="_blank" rel="noopener">https://www.iea.org/energy-system/industry/cement</a>
+              Shao, Z., &amp; Sakai, Y. (2025). Recycling recycled concrete powder into
+              low-carbon construction material through compaction and carbonation.
+              <em>Resources, Conservation &amp; Recycling, 222</em>, 108456.
+              <a href="https://doi.org/10.1016/j.resconrec.2025.108456" target="_blank" rel="noopener">https://doi.org/10.1016/j.resconrec.2025.108456</a>
             </li>
             <li>
-              Lothenbach, B., Scrivener, K., &amp; Hooton, R. D. (2011). Supplementary cementitious
-              materials. <em>Cement and Concrete Research, 41</em>(12), 1244–1256.
-              <a href="https://doi.org/10.1016/j.cemconres.2010.12.001" target="_blank" rel="noopener">https://doi.org/10.1016/j.cemconres.2010.12.001</a>
+              Shomal Zadeh, S., Joushideh, N., Bahrami, B., &amp; Niyafard, S. (2023).
+              A review on concrete recycling.
+              <em>World Journal of Advanced Research and Reviews, 19</em>(2), 784–793.
+              <a href="https://doi.org/10.30574/wjarr.2023.19.2.1631" target="_blank" rel="noopener">https://doi.org/10.30574/wjarr.2023.19.2.1631</a>
             </li>
             <li>
-              Tam, V. W. Y., Soomro, M., &amp; Evangelista, A. C. J. (2018). A review of recycled
-              aggregate in concrete applications. <em>Construction and Building Materials, 172</em>,
-              272–292.
-              <a href="https://doi.org/10.1016/j.conbuildmat.2018.03.240" target="_blank" rel="noopener">https://doi.org/10.1016/j.conbuildmat.2018.03.240</a>
+              Wu, J., Ye, X., &amp; Cui, H. (2025). Recycled materials in construction: Trends,
+              status, and future of research. <em>Sustainability, 17</em>, 2636.
+              <a href="https://doi.org/10.3390/su17062636" target="_blank" rel="noopener">https://doi.org/10.3390/su17062636</a>
             </li>
           </ol>
+          <div class="section-images">
+            <img src="./public/image/812855-1024x683.png" alt="Sustainable construction" />
+            <img src="/image/solar.png" alt="Solar energy" />
+          </div>
         </div>
       </section>
-
 
       <!-- ============================================================
            ABOUT US
       ============================================================ -->
       <section class="content-section about-section" id="about">
         <div class="container narrow">
-          <h2 class="section-heading">About the Hosts</h2>
-          <div class="hosts-grid">
-
-            <div class="host-card">
-              <div class="host-avatar host-avatar-m">M</div>
-              <div class="host-info">
-                <h3 class="host-name">Mahshid</h3>
-                <span class="host-role">Host</span>
-                <p>
-                  Mahshid is a sustainability researcher with a background in civil
-                  engineering and environmental policy. Her work focuses on decarbonisation
-                  pathways for the built environment. On EcoCast, she brings rigour and
-                  depth to the science behind green building materials, and is passionate
-                  about making technical topics accessible to everyone.
-                </p>
-              </div>
+          <h2 class="section-heading">About Us</h2>
+          <div class="host-card">
+            <div class="host-avatars">
+              <img src="/mahshid.png" alt="Mahshid" class="host-avatar-photo" />
+              <img src="/yara.png" alt="Yara" class="host-avatar-photo" />
             </div>
-
-            <div class="host-card">
-              <div class="host-avatar host-avatar-y">Y</div>
-              <div class="host-info">
-                <h3 class="host-name">Yara</h3>
-                <span class="host-role">Co-Host</span>
-                <p>
-                  Yara is an environmental journalist and educator who covers the
-                  intersection of industry, climate, and innovation. She has reported on
-                  construction and materials science from projects across Europe and the
-                  Middle East. On EcoCast, Yara ensures every complex idea is grounded in
-                  real-world consequence and human impact.
-                </p>
-              </div>
+            <div class="host-info">
+              <h3 class="host-name">Mahshid &amp; Yara</h3>
+              <span class="host-role">Hosts</span>
+              <p>
+                We are Mahshid and Yara, second-year students in Bouwmanagement en Vastgoedontwikkeling.
+              </p>
+              <p>
+                This podcast was created as part of our final project for the course
+                Internationalisering 2 – Interculturele Communicatie.
+              </p>
+              <p>
+                We chose this topic because sustainability in construction is becoming increasingly important
+                worldwide, and concrete plays a major role in this challenge. Through exploring concrete
+                recycling and green technologies, we aimed to better understand how the construction industry
+                can move toward a more sustainable and circular future.
+              </p>
             </div>
-
-          </div><!-- /.hosts-grid -->
+          </div>
         </div>
       </section>
-
-    </main><!-- /main -->
-
+    </main>
+    <!-- /main -->
 
     <!-- ============================================================
          FOOTER
@@ -390,13 +634,16 @@
     <footer class="site-footer">
       <div class="container">
         <p class="footer-title">EcoCast Podcast</p>
-        <p class="footer-sub">Exploring sustainability, one episode at a time.</p>
-        <p class="footer-copy">&copy; 2026 Mahshid &amp; Yara · All rights reserved</p>
+        <p class="footer-sub">
+          Exploring sustainability, one episode at a time.
+        </p>
+        <p class="footer-copy">
+          &copy; 2026 Mahshid &amp; Yara · All rights reserved
+        </p>
       </div>
     </footer>
 
     <!-- Minimal JS for the custom audio player -->
     <script type="module" src="/src/main.js"></script>
-
   </body>
 </html>
