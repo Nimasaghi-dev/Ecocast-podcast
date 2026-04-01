@@ -872,6 +872,7 @@ body {
   }
 
   .section-images img,
+  .section-images .ai-image img,
   .img-placeholder {
     height: 150px;
   }
