@@ -693,6 +693,24 @@ body {
   box-shadow: 0 8px 28px rgba(0,0,0,0.16);
 }
 
+.section-images .ai-image {
+  margin: 0;
+}
+
+.section-images .ai-image img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.section-images .ai-image figcaption {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #888;
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
 .img-placeholder {
   width: 100%;
   height: 230px;
